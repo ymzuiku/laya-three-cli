@@ -13,8 +13,8 @@ var files = [
   './bin',
   './src',
   './.gitignore',
+  '.package.json',
   './LayaAir.d.ts',
-  './package.json',
   './parcel-plugin-change-file.js',
   './README.md',
   './READMECN.md',
@@ -43,6 +43,9 @@ for (var i = 0, l = files.length; i < l; i++) {
   var ele = files[i];
   var theFilePath = path.resolve(__dirname, ele);
   var targetPath = path.resolve(outDir, ele);
+  if(ele === '.package.json') {
+    targetPath = path.resolve(outDir, 'package.json');
+  }
   if (isLogFiles) {
     console.log(theFilePath);
   }
