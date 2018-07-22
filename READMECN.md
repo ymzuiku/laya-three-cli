@@ -24,7 +24,7 @@
 
 ## :fire: 功能
 
-- 开发过程热更新, 包括H5和微信小游戏
+- 开发过程热更新, 实时刷新游戏界面, 包括H5和微信小游戏
 - 使用命令行编译你的微信小游戏
 - 使用你习惯的任何IDE进行开发
 - 首次使用预先打包core文件, 平时开发只要打包自己项目的代码, 使得打包速度有了数量级的提升
@@ -54,7 +54,6 @@ And, open `http://127.0.0.1:1234`
 
 ```sh
 $ yarn install
-$ yarn core
 $ yarn wechat
 ```
 
@@ -64,10 +63,10 @@ $ yarn wechat
 
 LayaAir 并没有把源码放到 npmjs.com 上,并且在 Github.com 上的源码也不是最新的,所以你只能手动去官网下载,并且手动更新:
 
-- 打开 [LayaAir Web](https://ldc.layabox.com/layadownload/?type=layaair-LayaAir%201.7.19.1%20beta) , and download new package
+- 打开 [LayaAir Web](https://ldc.layabox.com/layadownload/?type=layaair-LayaAir%201.7.19.1%20beta) , 并且下载源码
 - 拷贝 `lib`, 覆盖你项目中的 `bin/libs`
-- 完成!
+- 编译新的core.js `$ yarn core`
 
 ## :see_no_evil: 最后
 
-欢迎到[laya-three-cli](https://github.com/ymzuiku/laya-three-cli) 提交你的PR, 或是赏赐一个星星.
+如果你在使用中有更好的改进建议, 欢迎到[laya-three-cli](https://github.com/ymzuiku/laya-three-cli) 提交你的PR, 或是赏赐一个星星.
