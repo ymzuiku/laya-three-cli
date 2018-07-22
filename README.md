@@ -28,7 +28,7 @@ $ laya-three-cli your-project
 $ yarn install
 $ yarn start
 ```
-And, open `http://127.0.0.1:1234`
+And, open `http://localhost:1234`
 
 ## :rocket: Start WeChat Game
 

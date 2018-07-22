@@ -48,7 +48,10 @@ $ laya-three-cli your-project
 $ yarn install
 $ yarn start
 ```
-And, open `http://127.0.0.1:1234`
+
+然后使用浏览器访问 `http://localhost:1234`
+
+更改一下代码,并且保存, 看看游戏内容是否同时更新了
 
 ## :rocket: 启动微信小游戏
 
