@@ -22,7 +22,7 @@
 
 确保你的环境已经配置好 `nodejs` 和 `yarn`, 然后使用下文的几条命令开始你的项目吧.
 
-## 功能
+## :fire: 功能
 
 - 开发过程热更新, 包括H5和微信小游戏
 - 使用命令行编译你的微信小游戏
@@ -30,19 +30,19 @@
 - 首次使用预先打包core文件, 平时开发只要打包自己项目的代码, 使得打包速度有了数量级的提升
 
 
-## 安装 
+## :egg: 安装 
 
 ```sh
 $ npm install -g laya-three-cli
 ```
 
-## 创建项目
+## :package: 创建项目
 
 ```sh
 $ laya-three-cli your-project
 ```
 
-## 启动 H5 游戏
+## :rocket: 启动 H5 游戏
 
 ```
 $ yarn install
@@ -50,7 +50,7 @@ $ yarn start
 ```
 And, open `http://127.0.0.1:1234`
 
-## 启动微信小游戏
+## :rocket: 启动微信小游戏
 
 ```sh
 $ yarn install
@@ -60,7 +60,7 @@ $ yarn wechat
 
 然后使用 `微信开发者工具` 打开 `dev-wechat` 目录
 
-## 升级 LayaAir
+## :wrench: 升级 LayaAir
 
 LayaAir 并没有把源码放到 npmjs.com 上,并且在 Github.com 上的源码也不是最新的,所以你只能手动去官网下载,并且手动更新:
 
@@ -68,6 +68,6 @@ LayaAir 并没有把源码放到 npmjs.com 上,并且在 Github.com 上的源码
 - 拷贝 `lib`, 覆盖你项目中的 `bin/libs`
 - 完成!
 
-## 最后
+## :see_no_evil: 最后
 
 欢迎到[laya-three-cli](https://github.com/ymzuiku/laya-three-cli) 提交你的PR, 或是赏赐一个星星.
