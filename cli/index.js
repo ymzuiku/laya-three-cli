@@ -1,12 +1,13 @@
-const fse = require('fs-extra');
-const path = require('path');
-const args = process.argv.splice(2);
+var fse = require('./fs-extra/index.js');
+var path = require('path');
+var args = process.argv.splice(2);
+var package = require('../package.json');
 
 console.log(' ');
 console.log('init LayaAir...');
-const outDir = path.resolve(process.cwd(), `./${args[0]}`);
+var outDir = path.resolve(process.cwd(), `./${args[0]}`);
 
-const files = [
+var files = [
   './bin',
   './src',
   './.gitignore',
@@ -18,12 +19,15 @@ const files = [
   './.img',
 ];
 
-let isLogFiles = false;
+var isLogFiles = false;
 
-for (let i = 0, l = args.length; i < l; i++) {
+for (var i = 0, l = args.length; i < l; i++) {
   const ele = args[i];
   if (ele === '-l') {
     isLogFiles = true;
+  }
+  if (ele === '-version' || ele == '-V') {
+    console.log(`version: ${package.version}`);
   }
 }
 
@@ -33,10 +37,10 @@ if (!fse.existsSync(outDir)) {
 if (isLogFiles) {
   console.log('target: ', outDir);
 }
-for (let i = 0, l = files.length; i < l; i++) {
-  const ele = files[i];
-  const theFilePath = path.resolve(__dirname, ele);
-  const targetPath = path.resolve(outDir, ele);
+for (var i = 0, l = files.length; i < l; i++) {
+  var ele = files[i];
+  var theFilePath = path.resolve(__dirname, ele);
+  var targetPath = path.resolve(outDir, ele);
   if (isLogFiles) {
     console.log(theFilePath);
   }
@@ -44,7 +48,7 @@ for (let i = 0, l = files.length; i < l; i++) {
     console.log(`The ${outDir} is not empty!`);
     break;
   }
-  if (fse.existsSync(theFilePath)){
+  if (fse.existsSync(theFilePath)) {
     fse.copySync(theFilePath, targetPath);
   }
 }
@@ -60,4 +64,3 @@ console.log(`make H5 Game:      yarn start`);
 console.log(`make Wechat Game:  yarn wechat`);
 console.log('--------------------------------------------');
 console.log(' ');
-

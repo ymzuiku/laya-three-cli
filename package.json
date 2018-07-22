@@ -1,6 +1,6 @@
 {
   "name": "laya-three-cli",
-  "version": "0.1.0",
+  "version": "0.1.4",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,13 +8,12 @@
     "core": "parcel build bin/coreBuilder.js -d bin -o core.js",
     "wechat": "parcel watch src/index.ts -d dev-wechat -o index.js"
   },
-  "dependencies": {
-    "fs-extra": "^7.0.0"
-  },
   "devDependencies": {
     "parcel-bundler": "^1.9.7",
     "typescript": "^2.9.2",
     "parcel-plugin-change-file": "^1.2.6"
   },
-  "bin": "cli.js"
+  "bin": {
+    "laya-three-cli": "./cli/index.js"
+  }
 }
