@@ -43,7 +43,7 @@ for (var i = 0, l = files.length; i < l; i++) {
   var ele = files[i];
   var theFilePath = path.resolve(__dirname, ele);
   var targetPath = path.resolve(outDir, ele);
-  if(ele === '.package.json') {
+  if (ele === '.package.json') {
     targetPath = path.resolve(outDir, 'package.json');
   }
   if (isLogFiles) {

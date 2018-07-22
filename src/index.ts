@@ -1,4 +1,5 @@
 /// <reference path="../LayaAir.d.ts"/>
+const isDev = process.env.NODE_ENV === 'development'
 
 //初始化微信小游戏
 Laya.MiniAdpter.init();
@@ -7,7 +8,7 @@ Laya.init(1080, 1920, Laya.WebGL);
 Laya.stage.scaleMode = Laya.Stage.SCALE_FIXED_HEIGHT;
 Laya.stage.screenMode = 'vertical';
 Laya.stage.bgColor = '#f4f4f5';
-if (window['isDev']) {
+if (isDev) {
   Laya.Stat.show(20, 20);
   Laya.stage.destroyChildren();
 }
@@ -37,5 +38,11 @@ class Main {
     label.pos(300, 500);
     label.fontSize = 50;
     Laya.stage.addChild(label);
+
+    const img = new Laya.Image();
+    img.skin = 'comp/button.png';
+    img.pos(250, 700);
+    img.scale(2, 2);
+    Laya.stage.addChild(img);
   }
 }
