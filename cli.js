@@ -1,7 +1,9 @@
-var fse = require('./fs-extra/index.js');
+#!/usr/bin/env node
+
+var fse = require('fs-extra');
 var path = require('path');
 var args = process.argv.splice(2);
-var package = require('../package.json');
+var package = require('./package.json');
 
 console.log(' ');
 console.log('init LayaAir...');

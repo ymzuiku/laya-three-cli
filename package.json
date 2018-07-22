@@ -1,6 +1,6 @@
 {
   "name": "laya-three-cli",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -10,10 +10,13 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.9.7",
-    "typescript": "^2.9.2",
-    "parcel-plugin-change-file": "^1.2.6"
+    "parcel-plugin-change-file": "^1.2.6",
+    "typescript": "^2.9.2"
   },
   "bin": {
-    "laya-three-cli": "./cli/index.js"
+    "laya-three-cli": "./cli.js"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.0"
   }
 }
