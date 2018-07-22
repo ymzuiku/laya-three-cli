@@ -64,7 +64,7 @@ $ yarn wechat
 
 ## :wrench: 升级 LayaAir
 
-LayaAir 并没有把源码放到 npmjs.com 上,并且在 Github.com 上的源码也不是最新的,所以你只能手动去官网下载,并且手动更新:
+LayaAir官方 并没有把源码放到 npmjs.com 上,并且在 Github.com 上的源码也不是最新的,所以你只能手动去官网下载,并且手动更新:
 
 - 打开 [LayaAir Web](https://ldc.layabox.com/layadownload/?type=layaair-LayaAir%201.7.19.1%20beta) , 并且下载源码
 - 拷贝 `lib`, 覆盖你项目中的 `bin/libs`
