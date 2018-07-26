@@ -1,4 +1,3 @@
-/// <reference path="../LayaAir.d.ts"/>
 const isDev = process.env.NODE_ENV === 'development';
 const plan = window['plan']; // plan === 'wechat-game' or 'web'
 
