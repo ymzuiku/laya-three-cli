@@ -3,7 +3,7 @@
 ./release
 **/dev-*
 **/dev-wechat
-**/dev-webp
+**/dev-web
 **/dev-native
 **/.dist
 **/.test
