@@ -19,6 +19,8 @@ Laya.ResourceVersion.enable(
   Laya.ResourceVersion.FILENAME_VERSION,
 );
 
+import * as Routers from './Routers';
+
 function beginLoad() {
   // 加载资源
   Laya.loader.load('res/atlas/comp.atlas', Laya.Handler.create(null, onLoaded));
@@ -26,22 +28,5 @@ function beginLoad() {
 
 function onLoaded(): void {
   //实例项目
-  new Main();
-}
-
-class Main {
-  constructor() {
-    const label = new Laya.Text();
-    label.text = 'Hello LayaAir';
-    label.color = '#000';
-    label.pos(300, 500);
-    label.fontSize = 50;
-    Laya.stage.addChild(label);
-
-    const img = new Laya.Image();
-    img.skin = 'comp/button.png';
-    img.pos(250, 700);
-    img.scale(2, 2);
-    Laya.stage.addChild(img);
-  }
+  new Routers.Main(Laya.stage);
 }
