@@ -2,12 +2,13 @@
 
 var fse = require('fs-extra');
 var path = require('path');
-var args = process.argv.splice(2);
+var argv = process.argv.splice(2);
 var package = require('./package.json');
+
 
 console.log(' ');
 console.log('init LayaAir...');
-var outDir = path.resolve(process.cwd(), `./${args[0]}`);
+var outDir = path.resolve(process.cwd(), `./${argv[0]}`);
 
 var files = [
   './bin',
@@ -22,13 +23,17 @@ var files = [
 ];
 
 var isLogFiles = false;
+var isUseComp = false;
 
-for (var i = 0, l = args.length; i < l; i++) {
-  const ele = args[i];
-  if (ele === '-l') {
+for (var i = 0, l = argv.length; i < l; i++) {
+  const ele = argv[i];
+  if (ele === '-l' || ele === '--log') {
     isLogFiles = true;
   }
-  if (ele === '-version' || ele == '-V') {
+  if (ele === '-c' || ele == '--comp') {
+    isUseComp = true;
+  }
+  if (ele === '-v' || ele == '-version') {
     console.log(`version: ${package.version}`);
   }
 }
@@ -43,8 +48,11 @@ for (var i = 0, l = files.length; i < l; i++) {
   var ele = files[i];
   var theFilePath = path.resolve(__dirname, ele);
   var targetPath = path.resolve(outDir, ele);
-  if (ele === '.package.json') {
+  if (ele === './package.json') {
     targetPath = path.resolve(outDir, 'package.json');
+  }
+  if (ele === './src' && isUseComp === true) {
+    theFilePath = path.resolve(__dirname, './src-comp');
   }
   if (isLogFiles) {
     console.log(theFilePath);
@@ -63,7 +71,7 @@ fse.removeSync(path.resolve(outDir, './cli.js'));
 console.log(' ');
 console.log('Done! you can do:');
 console.log('--------------------------------------------');
-console.log(`cd in project:     cd ${args[0]}`);
+console.log(`cd in project:     cd ${argv[0]}`);
 console.log(`install:           yarn install && yarn code`);
 console.log(`make H5 Game:      yarn start`);
 console.log(`make Wechat Game:  yarn wechat`);
