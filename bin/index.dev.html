@@ -33,17 +33,16 @@
 <body>
   <!--以下引用了常用类库，如果不使用，可以删除-->
   <!--核心包，封装了显示对象渲染，事件，时间管理，时间轴动画，缓动，消息交互,socket，本地存储，鼠标触摸，声音，加载，颜色滤镜，位图字体等-->
-  <!--[
-    <script type="text/javascript" src="libs/laya.core.js"></script>
-  <script type="text/javascript" src="libs/laya.wxmini.js"></script>
+  <script type="text/javascript" src="libs/laya.core.js"></script>
   <script type="text/javascript" src="libs/laya.webgl.js"></script>
   <script type="text/javascript" src="libs/laya.ani.js"></script>
   <script type="text/javascript" src="libs/laya.filter.js"></script>
   <script type="text/javascript" src="libs/laya.html.js"></script>
   <script type="text/javascript" src="libs/laya.particle.js"></script>
   <script type="text/javascript" src="libs/laya.tiledmap.js"></script>
-  <script type="text/javascript" src="libs/laya.ui.js"></script> 
-  ]-->
+  <script type="text/javascript" src="libs/laya.ui.js"></script>
+  <!-- <script type="text/javascript" src="libs/laya.debugtool.js"></script> -->
+  <!-- <script type="text/javascript" src="libs/laya.wxmini.js"></script> -->
   <!-- 物理引擎matter.js -->
   <!--用户自定义顺序文件添加到这里-->
   <!--jsfile--Custom-->
@@ -55,13 +54,12 @@
   <!--jsfile-0-endTag-->
 
   <!--启动类添加到这里-->
-  <script type="text/javascript" src="libs/laya.debugtool.js"></script>
   <script>
     window['plan'] = 'web';
     window['isDev'] = true;
   </script>
   <!--jsfile--Main-->
-  <script src="../src/index.ts"></script>
+  <script src="bundle-rename.js"></script>
   <!--jsfile--Main-->
 </body>
 

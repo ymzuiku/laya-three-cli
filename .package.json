@@ -3,13 +3,20 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "start": "parcel bin/index.dev.html -d dev-web",
     "core": "parcel build bin/coreBuilder.js -d bin -o core.js",
+    "start": "pillar-pack -o dev-web -c bin",
+    "build": "pillar-pack -o server/public -c bin --prod --html index.html",
     "wechat": "parcel watch src/index.ts -d dev-wechat -o index.js"
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-runtime": "^6.26.0",
     "parcel-bundler": "^1.9.7",
-    "parcel-plugin-change-file": "^1.2.6",
-    "typescript": "^2.9.2"
+    "typescript": "^3.0.1"
   }
 }

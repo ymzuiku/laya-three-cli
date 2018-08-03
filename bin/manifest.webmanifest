@@ -18,6 +18,11 @@
       "sizes": "192x192"
     }
   ],
+  "plus": {
+    "statusbar": {
+      "style": "UIStatusBarStyleDefault"
+    }
+  },
   "display":"standalone",
   "start_url": "./index.html"
 }
