@@ -1,4 +1,4 @@
-/// <reference path="../LayaAir.d.ts"/>
+/// <reference path="../bin/LayaAir.d.ts"/>
 
 //初始化微信小游戏
 Laya.MiniAdpter.init();

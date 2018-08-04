@@ -1,24 +1,9 @@
 {
   "name": "laya-three-cli",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "main": "index.js",
+  "types": "bin/LayaAir.d.ts",
   "license": "MIT",
-  "scripts": {
-    "start": "parcel bin/index.dev.html -d dev-web",
-    "core": "parcel build bin/coreBuilder.js -d bin -o core.js",
-    "wechat": "parcel watch src/index.ts -d dev-wechat -o index.js"
-  },
-  "devDependencies": {
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-runtime": "^6.26.0",
-    "parcel-bundler": "^1.9.7",
-    "typescript": "^3.0.1"
-  },
   "bin": {
     "laya-three-cli": "./cli.js"
   },
